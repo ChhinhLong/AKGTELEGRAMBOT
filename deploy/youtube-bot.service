@@ -1,0 +1,52 @@
+# Professional Telegram YouTube Downloader Bot - Systemd Service
+[Unit]
+Description=Professional Telegram YouTube Downloader Bot
+Documentation=https://github.com/yourusername/telegram-youtube-bot
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/telegram-youtube-bot
+
+# Environment variables
+Environment=BOT_TOKEN=your_bot_token_here
+Environment=ADMIN_ID=7352192536
+Environment=LOG_LEVEL=INFO
+Environment=MAX_CONCURRENT_DOWNLOADS=5
+Environment=RATE_LIMIT_REQUESTS=30
+Environment=RATE_LIMIT_PERIOD=60
+Environment=ENABLE_ANALYTICS=true
+Environment=ENABLE_SECURITY=true
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+# Execution
+ExecStart=/usr/bin/python3 bot/main.py
+ExecReload=/bin/kill -HUP $MAINPID
+
+# Restart policy
+Restart=always
+RestartSec=10
+StartLimitInterval=0
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/home/ubuntu/telegram-youtube-bot/db /home/ubuntu/telegram-youtube-bot/logs /home/ubuntu/telegram-youtube-bot/temp
+
+# Resource limits
+LimitNOFILE=4096
+MemoryLimit=512M
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=youtube-bot
+
+[Install]
+WantedBy=multi-user.target

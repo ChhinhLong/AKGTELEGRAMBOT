@@ -1,0 +1,32 @@
+2025-09-08 00:00:10,229 - utils.database_simple - INFO - [database_simple.py:68] - Database initialized successfully
+2025-09-08 00:00:10,229 - __main__ - INFO - [main.py:602] - Bot starting...
+2025-09-08 00:00:10,230 - aiogram.dispatcher - INFO - [dispatcher.py:566] - Start polling
+2025-09-08 00:00:10,799 - aiogram.dispatcher - INFO - [dispatcher.py:363] - Run polling for bot @AKGDownloaderBot id=8420131655 - 'AKG Downloader'
+2025-09-08 00:00:10,992 - utils.database_simple - ERROR - [database_simple.py:83] - Error adding user 7352192536: table users has no column named last_seen
+2025-09-08 00:00:10,995 - utils.database_simple - ERROR - [database_simple.py:83] - Error adding user 7352192536: table users has no column named last_seen
+2025-09-08 00:00:11,746 - aiogram.event - INFO - [dispatcher.py:172] - Update id=936263122 is handled. Duration 755 ms by bot id=8420131655
+2025-09-08 00:00:11,772 - aiogram.event - INFO - [dispatcher.py:172] - Update id=936263123 is handled. Duration 781 ms by bot id=8420131655
+2025-09-08 00:00:33,551 - utils.database_simple - ERROR - [database_simple.py:83] - Error adding user 7352192536: table users has no column named last_seen
+2025-09-08 00:00:33,933 - aiogram.event - INFO - [dispatcher.py:172] - Update id=936263124 is handled. Duration 382 ms by bot id=8420131655
+2025-09-08 00:00:37,817 - aiogram.event - INFO - [dispatcher.py:172] - Update id=936263125 is handled. Duration 370 ms by bot id=8420131655
+2025-09-08 00:00:53,889 - aiogram.dispatcher - WARNING - [dispatcher.py:491] - Received SIGTERM signal
+2025-09-08 00:00:53,890 - aiogram.dispatcher - INFO - [dispatcher.py:395] - Polling stopped for bot @AKGDownloaderBot id=8420131655 - 'AKG Downloader'
+2025-09-08 00:00:53,890 - aiogram.dispatcher - INFO - [dispatcher.py:594] - Polling stopped
+2025-09-08 00:00:56,827 - utils.database_simple - INFO - [database_simple.py:68] - Database initialized successfully
+2025-09-08 00:00:56,828 - __main__ - INFO - [main.py:602] - Bot starting...
+2025-09-08 00:00:56,829 - aiogram.dispatcher - INFO - [dispatcher.py:566] - Start polling
+2025-09-08 00:00:57,384 - aiogram.dispatcher - INFO - [dispatcher.py:363] - Run polling for bot @AKGDownloaderBot id=8420131655 - 'AKG Downloader'
+2025-09-08 00:01:00,815 - aiogram.event - INFO - [dispatcher.py:172] - Update id=936263126 is handled. Duration 825 ms by bot id=8420131655
+2025-09-08 00:01:50,991 - aiogram.dispatcher - WARNING - [dispatcher.py:491] - Received SIGTERM signal
+2025-09-08 00:01:50,991 - aiogram.dispatcher - INFO - [dispatcher.py:395] - Polling stopped for bot @AKGDownloaderBot id=8420131655 - 'AKG Downloader'
+2025-09-08 00:01:50,991 - aiogram.dispatcher - INFO - [dispatcher.py:594] - Polling stopped
+2025-09-08 00:01:54,156 - utils.database_simple - INFO - [database_simple.py:68] - Database initialized successfully
+2025-09-08 00:01:54,157 - __main__ - INFO - [main.py:602] - Bot starting...
+2025-09-08 00:01:54,157 - aiogram.dispatcher - INFO - [dispatcher.py:566] - Start polling
+2025-09-08 00:01:54,714 - aiogram.dispatcher - INFO - [dispatcher.py:363] - Run polling for bot @AKGDownloaderBot id=8420131655 - 'AKG Downloader'
+2025-09-08 00:31:55,385 - __main__ - INFO - [main.py:157] - <module> - Initializing professional system managers...
+2025-09-08 00:31:55,388 - __main__ - ERROR - [main.py:209] - <module> - Failed to initialize managers: DatabaseManager.__init__() got an unexpected keyword argument 'enable_wal'
+2025-09-08 00:32:20,490 - __main__ - INFO - [main.py:157] - <module> - Initializing professional system managers...
+2025-09-08 00:32:20,491 - __main__ - ERROR - [main.py:208] - <module> - Failed to initialize managers: no running event loop
+2025-09-08 00:32:49,275 - __main__ - INFO - [main.py:157] - <module> - Initializing professional system managers...
+2025-09-08 00:32:49,276 - __main__ - ERROR - [main.py:208] - <module> - Failed to initialize managers: no running event loop

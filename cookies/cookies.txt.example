@@ -1,0 +1,16 @@
+# Netscape HTTP Cookie File
+# This is an example file. Replace with your actual YouTube cookies.
+# 
+# Format: domain flag path secure expiration name value
+# 
+# Example cookies (these won't work, get real ones from YouTube):
+.youtube.com	TRUE	/	FALSE	1735689600	VISITOR_INFO1_LIVE	example_value_here
+.youtube.com	TRUE	/	FALSE	1735689600	YSC	example_session_id
+.youtube.com	TRUE	/	TRUE	1735689600	LOGIN_INFO	example_login_token
+#
+# To get real cookies:
+# 1. Go to youtube.com in your browser
+# 2. Make sure you're logged in
+# 3. Use a browser extension to export cookies
+# 4. Replace this file with your exported cookies.txt
+# 5. Use /addcookies admin command to upload via Telegram

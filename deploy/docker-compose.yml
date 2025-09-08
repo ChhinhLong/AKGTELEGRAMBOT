@@ -1,0 +1,68 @@
+# Professional Telegram YouTube Downloader Bot - Docker Compose
+version: '3.8'
+
+services:
+  youtube-bot:
+    build: 
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: professional-youtube-bot
+    restart: unless-stopped
+    
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_ID=${ADMIN_ID:-7352192536}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - MAX_CONCURRENT_DOWNLOADS=${MAX_CONCURRENT_DOWNLOADS:-5}
+      - RATE_LIMIT_REQUESTS=${RATE_LIMIT_REQUESTS:-30}
+      - RATE_LIMIT_PERIOD=${RATE_LIMIT_PERIOD:-60}
+      - ENABLE_ANALYTICS=${ENABLE_ANALYTICS:-true}
+      - ENABLE_SECURITY=${ENABLE_SECURITY:-true}
+    
+    volumes:
+      - bot_data:/app/db
+      - bot_logs:/app/logs
+      - bot_temp:/app/temp
+    
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    networks:
+      - bot_network
+    
+    # Resource limits for production
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
+
+  # Optional: Add monitoring with Prometheus (advanced)
+  # monitoring:
+  #   image: prom/prometheus
+  #   container_name: bot-monitoring
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+  #   networks:
+  #     - bot_network
+
+volumes:
+  bot_data:
+    driver: local
+  bot_logs:
+    driver: local
+  bot_temp:
+    driver: local
+
+networks:
+  bot_network:
+    driver: bridge

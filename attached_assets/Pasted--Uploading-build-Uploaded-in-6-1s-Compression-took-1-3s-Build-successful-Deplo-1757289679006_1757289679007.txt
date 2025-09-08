@@ -1,0 +1,22 @@
+==> Uploading build...
+==> Uploaded in 6.1s. Compression took 1.3s
+==> Build successful 🎉
+==> Deploying...
+==> Running 'python bot/main.py'
+Traceback (most recent call last):
+  File "/opt/render/project/src/bot/main.py", line 39, in <module>
+    from utils.download_manager_pro import AdvancedDownloadManager
+  File "/opt/render/project/src/bot/../utils/download_manager_pro.py", line 61
+    def __init__(self, max_concurrent: int = 5, temp_dir: str = \"temp\", cleanup_interval: int = 3600):\n        \"\"\"Initialize advanced download manager\"\"\"\n        self.max_concurrent = max_concurrent\n        self.temp_dir = temp_dir\n        self.cleanup_interval = cleanup_interval\n        \n        # Create directories\n        os.makedirs(temp_dir, exist_ok=True)\n        os.makedirs(os.path.join(temp_dir, \"thumbnails\"), exist_ok=True)\n        \n        # Concurrent download management\n        self.semaphore = asyncio.Semaphore(max_concurrent)\n        self.active_downloads: Dict[str, DownloadProgress] = {}\n        self.download_queue = asyncio.Queue()\n        self.progress_callbacks: Dict[int, Callable] = {}\n        \n        # Statistics\n        self.stats = {\n            'total_downloads': 0,\n            'successful_downloads': 0,\n            'failed_downloads': 0,\n            'total_bytes_downloaded': 0,\n            'average_speed': 0.0,\n            'qua
+                                                                 ^
+SyntaxError: unexpected character after line continuation character
+==> Exited with status 1
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+==> Running 'python bot/main.py'
+Traceback (most recent call last):
+  File "/opt/render/project/src/bot/main.py", line 39, in <module>
+    from utils.download_manager_pro import AdvancedDownloadManager
+  File "/opt/render/project/src/bot/../utils/download_manager_pro.py", line 61
+    def __init__(self, max_concurrent: int = 5, temp_dir: str = \"temp\", cleanup_interval: int = 3600):\n        \"\"\"Initialize advanced download manager\"\"\"\n        self.max_concurrent = max_concurrent\n        self.temp_dir = temp_dir\n        self.cleanup_interval = cleanup_interval\n        \n        # Create directories\n        os.makedirs(temp_dir, exist_ok=True)\n        os.makedirs(os.path.join(temp_dir, \"thumbnails\"), exist_ok=True)\n        \n        # Concurrent download management\n        self.semaphore = asyncio.Semaphore(max_concurrent)\n        self.active_downloads: Dict[str, DownloadProgress] = {}\n        self.download_queue = asyncio.Queue()\n        self.progress_callbacks: Dict[int, Callable] = {}\n        \n        # Statistics\n        self.stats = {\n            'total_downloads': 0,\n            'successful_downloads': 0,\n            'failed_downloads': 0,\n            'total_bytes_downloaded': 0,\n            'average_speed': 0.0,\n            'qua
+                                                                 ^
+SyntaxError: unexpected character after line continuation character

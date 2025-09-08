@@ -1,0 +1,59 @@
+# Professional Telegram YouTube Downloader Bot - Render.com Configuration
+services:
+  - type: web
+    name: professional-youtube-bot
+    env: python
+    region: oregon  # Choose your preferred region
+    plan: starter  # Upgrade from free for 24/7 operation
+    buildCommand: |
+      pip install --upgrade pip &&
+      pip install -r requirements.txt &&
+      mkdir -p logs temp db cookies
+    startCommand: "python bot/main.py"
+    
+    # Health check endpoint (optional)
+    healthCheckPath: /
+    
+    # Environment variables
+    envVars:
+      - key: BOT_TOKEN
+        sync: false  # Set this manually in Render dashboard
+      - key: ADMIN_ID
+        value: "7352192536"
+      - key: LOG_LEVEL
+        value: "INFO"
+      - key: MAX_CONCURRENT_DOWNLOADS
+        value: "5"
+      - key: RATE_LIMIT_REQUESTS
+        value: "30"
+      - key: RATE_LIMIT_PERIOD
+        value: "60"
+      - key: ENABLE_ANALYTICS
+        value: "true"
+      - key: ENABLE_SECURITY
+        value: "true"
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"
+    
+    # Disk space for temporary files
+    disk:
+      name: bot-storage
+      mountPath: /app/temp
+      sizeGB: 1
+
+# Optional: Add a database service (PostgreSQL)
+# Uncomment if you want to use PostgreSQL instead of SQLite
+#  - type: pserv
+#    name: youtube-bot-db
+#    env: postgresql
+#    plan: starter
+#    region: oregon
+#    envVars:
+#      - key: POSTGRES_DB
+#        value: youtube_bot
+#      - key: POSTGRES_USER
+#        generateValue: true
+#      - key: POSTGRES_PASSWORD
+#        generateValue: true

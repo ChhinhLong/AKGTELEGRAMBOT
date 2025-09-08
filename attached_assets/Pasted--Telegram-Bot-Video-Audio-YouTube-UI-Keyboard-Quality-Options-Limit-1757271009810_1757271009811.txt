@@ -1,0 +1,93 @@
+
+បង្កើត Telegram Bot សម្រាប់ទាញយក Video និង Audio ពី YouTube មាន UI Keyboard, Quality Options, Limit Usage, Prime Mode, Admin Panel, Ads, និង Free Deploy 24/7 (GitHub → Render)។
+
+📲 Features
+
+🔹 Core Features
+	•	✅ Welcome Message (មាន Tutorial និង Credit)
+	•	✅ Inline Keyboard:
+	•	🎬 Video Download
+	•	🎵 Audio Download
+	•	✅ Video Quality Options (360p, 480p, 720p, 1080p → Prime Only)
+	•	✅ Bot Reaction 👀 នៅពេល User ផ្ញើ Link
+	•	✅ Timeout 3600s (ដើម្បីអាច Download file ធំៗ)
+	•	✅ Credit: @AKGDownloaderBot
+	•	✅ Support Info:
+	•	Telegram: @chhinhlong
+	•	Email: chhinhlong2008@gmail.com
+
+🔹 User System
+	•	👤 Normal User
+	•	អាចទាញបាន 15 ដង / 1 ម៉ោង
+	•	Cooldown 30 នាទី មុនពេលប្រើ 15 ដងទៀត
+	•	Quality: 360p / 480p
+	•	👑 Prime User
+	•	Unlimited download ឬកំណត់ដោយ Admin
+	•	អាចទាញយក High Quality (720p, 1080p, Audio HQ)
+	•	Prime មាន Expiration Date
+	•	Buy Prime (via Admin)
+
+🔹 Admin Panel
+	•	👨‍💻 Admin: @chhinhlong (id: 7352192536)
+	•	📌 Admin Commands:
+	•	/setprime [user_id] [days] → ផ្ដល់ Prime
+	•	/removeprime [user_id] → ដក Prime
+	•	/stats → ពិនិត្យ User, Prime, Usage
+	•	/broadcast [msg] → ផ្ញើ Ads ទៅ User ទាំងអស់
+	•	/addcookies → Upload cookies.txt សម្រាប់ bypass YouTube restrictions
+	•	/fixcode → Auto reload / clear errors
+
+🔹 Monetization & Ads
+	•	🪙 Prime Subscription (Paid by Admin Settings)
+	•	📢 Admin អាចផ្ដល់ព័ត៌មាន ឬ Ads នៅក្នុង Bot
+	•	💵 Bot អាចបង្កើតចំណូលតាមរយៈ Prime ឬ Sponsor Ads
+
+⚙️ Technical Specs
+	•	🔧 Language: Python (Aiogram + yt-dlp)
+	•	📂 File Structure:
+	•	/bot/ → main code
+	•	/utils/ → helpers (limit, database, fixcode, cookies)
+	•	/db/ → SQLite / JSON DB for User, Prime, Usage
+	•	/deploy/ → Render config (free deploy)
+	•	/cookies/ → cookies.txt
+	•	🛠 Functions:
+	•	Download Manager (yt-dlp)
+	•	Usage Limiter (15/hour, cooldown 30min)
+	•	Prime Checker
+	•	Admin Tools
+	•	Ads Broadcaster
+	•	Auto Fixer (restart service if crash)
+
+⌨️ Commands
+
+👤 User (Normal)
+	•	/start → Welcome + Tutorial
+	•	/help → Support info
+	•	/video → Download Video
+	•	/audio → Download Audio
+	•	/limit → Check usage remaining
+	•	/upgrade → Info how to get Prime
+
+👑 Prime User
+	•	/video → Download Video (HQ + All Quality)
+	•	/audio → HQ Audio Download
+	•	/limit → Unlimited or Expiration Info
+
+👨‍💻 Admin
+	•	/setprime [user_id] [days]
+	•	/removeprime [user_id]
+	•	/stats
+	•	/broadcast [msg]
+	•	/addcookies
+	•	/fixcode
+
+🚀 Extra Functions You Can Add
+	•	📊 Analytics Dashboard (User Count, Downloads, Prime vs Normal)
+	•	⏰ Schedule Ads to show every 10 downloads
+	•	🗂 Auto Clean Temp Files after each download
+	•	🌐 Multi-language Support (Khmer + English)
+	•	📦 Export User Data (CSV for Admin)
+
+ចង់ អាចសរសេរ Full Code (Folder + File Ready to Deploy GitHub → Render)
+
+សរសេរកូដពេញលេញ

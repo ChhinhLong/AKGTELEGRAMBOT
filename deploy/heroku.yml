@@ -1,0 +1,12 @@
+# Professional Telegram YouTube Downloader Bot - Heroku Configuration
+build:
+  docker:
+    worker: deploy/Dockerfile
+
+run:
+  worker: python bot/main.py
+
+# Heroku-specific buildpacks (alternative to Docker)
+# buildpacks:
+#   - url: https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+#   - url: heroku/python
